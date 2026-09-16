@@ -32,7 +32,7 @@ Email alert on price drop
 ## Setup
 
 ```bash
-git clone <your-repo-url>
+git clone <https://github.com/joselaraj/car_price_tracker.git>
 cd car_price_tracker
 python -m venv .venv
 source .venv/bin/activate
