@@ -18,10 +18,8 @@ try:
 except ImportError:
     def load_dotenv(*args, **kwargs):
         return False
-
-# Build paths inside the project like this: BASE_DIR / 'subdir'.
+    
 BASE_DIR = Path(__file__).resolve().parent.parent
-
 load_dotenv(BASE_DIR / "KEY.env")
 AUTO_DEV_API_KEY = os.getenv("AUTO_DEV_API_KEY", "")
 
@@ -46,10 +44,13 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    "rest_framework",
+    "corsheaders",
     'tracker',
 ]
 
 MIDDLEWARE = [
+    "corsheaders.middleware.CorsMiddleware",  
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -108,6 +109,9 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:3000",  
+]
 
 # Internationalization
 # https://docs.djangoproject.com/en/6.0/topics/i18n/

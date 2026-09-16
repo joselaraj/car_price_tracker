@@ -1,6 +1,6 @@
 from rest_framework import viewsets
-from .models import TrackedSearch, Listing
-from .serializers import TrackedSearchSerializer, ListingSerializer
+from tracker.models import TrackedSearch, Listing
+from tracker.serializers import TrackedSearchSerializer, ListingSerializer
 
 class TrackedSearchViewSet(viewsets.ModelViewSet):
     queryset = TrackedSearch.objects.all()
