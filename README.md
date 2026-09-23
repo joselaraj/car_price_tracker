@@ -66,8 +66,3 @@ celery -A cartracker beat --loglevel=info
 
 Python, Django, Celery, Redis, Auto.dev API, PostgreSQL/SQLite
 
-## Roadmap
-
-- [ ] React/Recharts frontend for browsing tracked listings and price history
-- [ ] SMS alerts via Twilio
-- [ ] Docker Compose for one-command local setup
